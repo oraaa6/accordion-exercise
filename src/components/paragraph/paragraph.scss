@@ -1,0 +1,31 @@
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(241, 241, 241);
+  transition: background-color 1s ease-in-out;
+  &__arrow {
+    margin-right: 30px;
+    transition: transform 1s ease-in-out;
+    &--up {
+      transform: rotate(180deg);
+    }
+  }
+  &--dark {
+    background-color: rgb(192, 192, 192);
+  }
+}
+
+.description {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+  &--opened {
+    max-height: 400px;
+    overflow: auto;
+  }
+  &__text {
+    padding: 10px 20px;
+  }
+}
